@@ -25,7 +25,7 @@
 - `0 <= s.length <= 10`
 - `s` 由 `'A'` 和 `'B'` 组成
 
-**代码: **
+**代码：**
 
 ```c++
 class Solution {
@@ -87,7 +87,7 @@ public:
 - `1 <= staple[i],drinks[i] <= 10^5`
 - `1 <= x <= 2*10^5`
 
-**代码: **
+**代码：**
 
 ```c++
 class Solution {
@@ -143,7 +143,7 @@ public:
 - `3 <= leaves.length <= 10^5`
 - `leaves` 中只包含字符 `'r'` 和字符 `'y'`
 
-**代码: **
+**代码：**
 
 ```c++
 class Solution {
@@ -203,7 +203,7 @@ public:
 - `2 <= jump[i] <= 10^6`
 - `1 <= inc, dec, cost[i] <= 10^6`
 
-**代码: **
+**代码：**
 
 ```c++
 class Solution {
@@ -258,7 +258,7 @@ public:
 - `1 <= edges[i][0], edges[i][1] <= edges.length 且 edges[i][0] != edges[i][1]`
 - `1 <= startA, startB <= edges.length 且 startA != startB`
 
-**代码: **
+**代码：**
 
 ```C++
 class Solution {
