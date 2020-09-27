@@ -18,11 +18,7 @@
 
 执行完所有变更文件夹操作后，请你找出 **返回主文件夹所需的最小步数** 。
 
- 
-
 **示例 1：**
-
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/09/26/sample_11_1957.png)
 
 ```
 输入：logs = ["d1/","d2/","../","d21/","./"]
@@ -31,8 +27,6 @@
 ```
 
 **示例 2：**
-
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/09/26/sample_22_1957.png)
 
 ```
 输入：logs = ["d1/","d2/","./","d3/","../","d31/"]
@@ -46,7 +40,7 @@
 输出：0
 ```
 
-**提示：**
+**提示**
 
 - `1 <= logs.length <= 103`
 - `2 <= logs[i].length <= 10`
@@ -56,7 +50,7 @@
 
 **代码：**
 
-```
+```c++
 class Solution {
 public:
     int minOperations(vector<string>& logs) {
@@ -88,12 +82,7 @@ public:
 
 返回最大化利润所需执行的 **最小轮转次数** 。 如果不存在利润为正的方案，则返回 `-1` 。
 
- 
-
 **示例 1：**
-
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/09/26/wheeldiagram12.png)
-
 ```
 输入：customers = [8,3], boardingCost = 5, runningCost = 6
 输出：3
@@ -105,7 +94,6 @@ public:
 ```
 
 **示例 2：**
-
 ```
 输入：customers = [10,9,6], boardingCost = 6, runningCost = 4
 输出：7
@@ -121,7 +109,6 @@ public:
 ```
 
 **示例 3：**
-
 ```
 输入：customers = [3,4,0,5,1], boardingCost = 1, runningCost = 92
 输出：-1
@@ -135,7 +122,6 @@ public:
 ```
 
 **示例 4：**
-
 ```
 输入：customers = [10,10,6,4,7], boardingCost = 3, runningCost = 8
 输出：9
@@ -321,11 +307,7 @@ private:
 
 请你从原请求列表中选出若干个请求，使得它们是一个可行的请求列表，并返回所有可行列表中最大请求数目。
 
- 
-
 **示例 1：**
-
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/09/26/move1.jpg)
 
 ```
 输入：n = 5, requests = [[0,1],[1,0],[0,1],[1,2],[2,0],[3,4]]
@@ -342,8 +324,6 @@ private:
 ```
 
 **示例 2：**
-
-![img](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2020/09/26/move2.jpg)
 
 ```
 输入：n = 3, requests = [[0,0],[1,2],[2,1]]
