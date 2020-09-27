@@ -16,15 +16,11 @@
 
 ### Weekly
 
-- [WeeklyContest207](https://github.com/xjh1341/ProgrammingContest/blob/master/WeeklyContest207.md)
-
-- [WeeklyContest206](https://github.com/xjh1341/ProgrammingContest/blob/master/WeeklyContest206.md)
-
-- [WeeklyContest205](https://github.com/xjh1341/ProgrammingContest/blob/master/WeeklyContest207.md)
-
-- [WeeklyContest205](https://github.com/xjh1341/ProgrammingContest/blob/master/WeeklyContest207.md)
-
-- [WeeklyContest204](https://github.com/xjh1341/ProgrammingContest/blob/master/WeeklyContest207.md)
+- [WeeklyContest208](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/Weekly/Weekly208.md)
+- [WeeklyContest207](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/Weekly/Weekly207.md)
+- [WeeklyContest206](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/Weekly/Weekly206.md)
+- [WeeklyContest205](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/Weekly/Weekly205.md)
+- [WeeklyContest204](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/Weekly/Weekly204.md)
 
 ### Biweekly
 
