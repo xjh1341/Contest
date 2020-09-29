@@ -1,7 +1,5 @@
 ## 第208场周赛
 
-[比赛链接](https://leetcode-cn.com/contest/weekly-contest-208/)
-
 ### 1. 文件夹操作日志搜集器
 
 每当用户执行变更文件夹操作时，LeetCode 文件系统都会保存一条日志记录。
@@ -351,10 +349,48 @@ private:
 
 **题解：**
 
+​		数据规模较小，可以直接枚举
 
+​		最大最小费用流
+
+​		状态压缩O((N+M)\cdot2^M)*O*((*N*+*M*)⋅2*M*)。
 
 **代码：**
 
+```c++
+class Solution {
+public:
+    int maximumRequests(int n, vector<vector<int>>& req) 
+    {
+        int ans = 0;
+        int m = req.size();
+        int lim = (1 << m);
+        vector<int> delta(n);
+        for(int state = 0; state < lim; state++) {
+            for(int i = 0; i < n; i++) {
+                delta[i] = 0;
+            }
+            int cnt = 0;
+            for(int i = 0, k = 1; i < m; i++, k <<= 1) {
+                if(state & k) {
+                    delta[req[i][0]]++;
+                    delta[req[i][1]]--;
+                    cnt++;
+                }
+            }
+            bool flag = 1;
+            for(int i = 0; i < n; i++) {
+                if(delta[i] != 0) {
+                    flag = 0;
+                    break;
+                }
+            }
+            if(flag) {
+                ans = max(ans, cnt);
+            }
+        }
+        return ans;
+    }
+};
 ```
 
-```
