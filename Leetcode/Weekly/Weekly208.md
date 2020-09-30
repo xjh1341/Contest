@@ -36,7 +36,7 @@ public:
 
 **代码：**
 
-```
+```c++
 class Solution {
 public:
     int minOperationsMaxProfit(vector<int>& customers, int boardingCost, int runningCost) {
@@ -84,7 +84,7 @@ public:
 
 **代码：**
 
-```
+```c++
 class ThroneInheritance {
 public:
     ThroneInheritance(string kingName) {

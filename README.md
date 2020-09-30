@@ -34,8 +34,6 @@
 
 - [BiweeklyContest32](https://github.com/xjh1341/ProgrammingContest/blob/master/Leetcode/BiweeklyContest32.md)
 
-## 计蒜客
-
 ## KickStart
 
 ### 2020
