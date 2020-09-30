@@ -28,7 +28,7 @@ public:
 };
 ```
 
-### [2. 经营摩天轮的最大利润](https://leetcode-cn.com/contest/weekly-contest-208/problems/crawler-log-folder/)
+### [2. 经营摩天轮的最大利润](https://leetcode-cn.com/contest/weekly-contest-208/problems/maximum-profit-of-operating-a-centennial-wheel/)
 
 **题解：**
 
@@ -78,12 +78,9 @@ public:
 };
 ```
 
-### [3. 皇位继承顺序](https://leetcode-cn.com/contest/weekly-contest-208/problems/crawler-log-folder/)
+### [3. 皇位继承顺序](https://leetcode-cn.com/contest/weekly-contest-208/problems/throne-inheritance/)
 
 **题解：**
-
-
-
 
 **代码：**
 
@@ -127,7 +124,7 @@ private:
 };
 ```
 
-### [4. 最多可达成的换楼请求数目](https://leetcode-cn.com/contest/weekly-contest-208/problems/crawler-log-folder/)
+### [4. 最多可达成的换楼请求数目](https://leetcode-cn.com/contest/weekly-contest-208/problems/maximum-number-of-achievable-transfer-requests/)
 
 **题解：**
 
