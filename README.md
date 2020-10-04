@@ -21,11 +21,11 @@
 
 ### Biweekly
 
-- [BiweeklyContest36](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Contest36.md)
-- [BiweeklyContest35](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Contest35.md)
-- [BiweeklyContest34](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Contest34.md)
-- [BiweeklyContest33](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Contest33.md)
-- [BiweeklyContest32](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Contest32.md)
+- [BiweeklyContest36](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Biweekly36.md)
+- [BiweeklyContest35](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Biweekly35.md)
+- [BiweeklyContest34](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Biweekly34.md)
+- [BiweeklyContest33](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Biweekly33.md)
+- [BiweeklyContest32](https://github.com/xjh1341/Contest/blob/master/Leetcode/Biweekly/Biweekly32.md)
 
 ## KickStart
 
