@@ -35,7 +35,7 @@ public:
 
 ### [2. 魔术排列](https://leetcode-cn.com/contest/season/2020-fall/problems/er94lq/)
 
-**提示：**
+**题解：**
 
 可以直接通过target计算出k的值，然后进行模拟
 
@@ -101,43 +101,123 @@ public:
 };
 ```
 
-### 3. 数字游戏
+### [3. 数字游戏](https://leetcode-cn.com/contest/season/2020-fall/problems/5TxKeK/)
 
-**提示：**
+**题解：**
 
+`nums[a]+1==nums[a+1]`可以转换为`nums[a]-a==nums[a+1]-(a+1)`
 
+题意即使nums[i] - i 后的数组，变成全部元素相等最少需要的步数，元素相等且最少步数，既等于中位数；
+
+求最小中位数可以使用两个优先队列，大顶堆存储较小的部分，小顶堆存储较大的部分；
+
+默认较小的部分多一个元素，防止数据流为奇数个；
 
 **代码：**
 
-```
+```c++
 class Solution {
 public:
+    const int mod = 1e9 + 7;
+    typedef long long ll;
+    
     vector<int> numsGame(vector<int>& nums) {
+        int n = nums.size();
+        if(n == 1) {
+            return {0};
+        }
+        priority_queue<int> low;
+        priority_queue<int, vector<int>, greater<int>> high;
+        ll lowSum = 0, highSum = 0;
+        vector<int> ans(n);
 
+        for(int i = 0; i < n; i++) {
+            nums[i] -= i;
+        }
+
+        for(int i = 0; i < n; i++) {
+            low.push(nums[i]);
+            lowSum += nums[i];
+            high.push(low.top());
+            highSum += low.top();
+            lowSum -= low.top();
+            low.pop();
+            if(high.size() > low.size()) {
+                low.push(high.top());
+                lowSum += high.top();
+                highSum -= high.top();
+                high.pop();
+            }
+            int mid;
+            if(low.size() > high.size()) {
+                mid = low.top();
+            } else {
+                mid = (low.top() + high.top()) / 2;
+            }
+            ll t = mid * low.size() - lowSum + highSum - mid * high.size();
+            ans[i] = t % mod;
+        }
+        return ans;
     }
 };
 ```
 
-### 4. 古董键盘
+### [4. 古董键盘](https://leetcode-cn.com/contest/season/2020-fall/problems/Uh984O/)
 
-**提示：**
+**题解：**
 
+分组背包问题，26组，每组有k次可选，求装满背包容量n的方案；
 
+`dp[i][j]`表示使用了 i 个字母，构成序列长度为 j 的可能方案个数；
+
+转移方程：使用第i个字母，往前i - 1个字母中所有可能插入c个该字母
+
+`dp[i][j] = dp[i - 1][j - c] * comb[j][c]`
+
+注意：使用long long存储组合数的时候也可能溢出；
 
 **代码：**
 
-```
+```c++
 class Solution {
 public:
-    int keyboard(int k, int n) {
+    const int mod = 1e9 + 7;
+    typedef long long ll;
 
+    int keyboard(int k, int n) {
+        vector<vector<ll>> comb(n + 1, vector<ll>(n + 1));
+        comb[0][0] = 1;
+        for(int i = 1; i <= n; i++) {
+            comb[i][0] = 1;
+            for(int j = 1; j <= i; j++) {
+                comb[i][j] = comb[i - 1][j] + comb[i - 1][j - 1];
+                comb[i][j] %= mod;
+            }
+        }
+
+        vector<vector<ll>> dp(27, vector<ll>(n + 1, 0));
+        for(int i = 0; i <= 26; i++) {
+            dp[i][0] = 1;
+        }
+        for(int i = 1; i <= 26; i++) {
+            for(int j = 1; j <= n; j++) {
+                for(int c = 0; c <= k; c++) {
+                    if(j < c) continue;
+                    dp[i][j] += dp[i - 1][j - c] * comb[j][c];
+                }
+                dp[i][j] %= mod;
+            }
+        }
+        return dp[26][n];
     }
 };
 ```
 
-### 5. 导航装置
+### [5. 导航装置](https://leetcode-cn.com/contest/season/2020-fall/problems/hSRGyL/)
 
-**提示：**
+**题解：**
+
+
 
 **代码：**
 
@@ -159,11 +239,11 @@ public:
 };
 ```
 
-### 6. 黑盒光线反射
+### [6. 黑盒光线反射](https://leetcode-cn.com/contest/season/2020-fall/problems/IQvJ9i/)
 
-> 
+**题解：**
 
-**提示：**
+
 
 **代码：**
 
