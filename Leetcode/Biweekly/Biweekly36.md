@@ -102,10 +102,50 @@ public:
 
 **题解：**
 
-优先队列
+使用set存储空闲的服务器，使用优先队列存储正在处理的服务器，并且每次更新处理完的服务器加入等待集合
 
 **代码：**
 
 ```c++
+class Solution {
+public:
+    typedef pair<int, int> pii;
+    vector<int> busiestServers(int k, vector<int>& arrival, vector<int>& load) {
+        int n = arrival.size();
+        priority_queue<pii, vector<pii>, greater<pii>> pq;
+        set<int> st;
+        vector<int> cnt(k);
+        int maxcnt = 0;
 
+        for(int i = 0; i < k; i++) {
+            st.insert(i);
+        }
+
+        for(int i = 0; i < n; i++) {
+            while(!pq.empty() && pq.top().first <= arrival[i]) {
+                st.insert(pq.top().second);
+                pq.pop();
+            }
+            int cur = i % k;
+            if(st.empty()) continue;
+            auto it = st.lower_bound(cur);
+            if(it == st.end()) {
+                it = st.begin();
+            }
+            cur = *it;
+            st.erase(it);
+            pq.push({arrival[i] + load[i], cur});
+            cnt[cur]++;
+            maxcnt = max(maxcnt, cnt[cur]);
+        }
+
+        vector<int> ans;
+        for(int i = 0; i < k; i++) {
+            if(cnt[i] == maxcnt) {
+                ans.push_back(i);
+            }
+        }
+        return ans;
+    }
+};
 ```
